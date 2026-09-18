@@ -1,15 +1,15 @@
-"""Module 14: ADVANCED OSINT ENGINE (Legal & Ethical - Public Sources)."""
+"""Module 14: ADVANCED OSINT ENGINE (Legal & Ethical)."""
 from __future__ import annotations
 import os, sys, json, requests, concurrent.futures, re
 from core.banner import Colors
 
 try:
     import phonenumbers
+    from phonenumbers import geocoder, carrier, timezone, number_type, PhoneNumberType
     PHONE_LIB = True
 except ImportError:
     PHONE_LIB = False
 
-# --- 1. USERNAME & EMAIL BREACH CHECKER (XposedOrNot) ---
 def check_breach_email(email: str):
     print(f"\n{Colors.cyan('[+]')} Checking Email Breaches: {Colors.bold(email)}")
     try:
@@ -28,7 +28,6 @@ def check_breach_email(email: str):
     except Exception as e:
         print(f"  {Colors.red('[!] Error:')} {e}")
 
-# --- 2. PASSWORD BREACH CHECKER (HIBP k-Anonymity) ---
 def check_password_breach(password: str):
     print(f"\n{Colors.cyan('[+]')} Checking Password Breach (HIBP)...")
     import hashlib
@@ -46,7 +45,6 @@ def check_password_breach(password: str):
     except Exception as e:
         print(f"  {Colors.red('[!] Error:')} {e}")
 
-# --- 3. USERNAME OSINT (WhatsMyName - Public Profiles) ---
 def check_username(site_url: str, site_name: str, username: str):
     try:
         url = site_url.replace("{account}", username)
@@ -80,25 +78,56 @@ def username_osint(username: str):
     if not found:
         print(f"  {Colors.yellow('[-] Username not found on common platforms.')}")
 
-# --- 4. INDIAN PHONE NUMBER OSINT (Public Info Only) ---
 def phone_osint(phone: str):
-    print(f"\n{Colors.cyan('[+]')} Phone Number OSINT: {Colors.bold(phone)}")
+    print(f"\n{Colors.cyan('[+]')} Advanced Phone Number OSINT: {Colors.bold(phone)}")
     if not PHONE_LIB:
         print(f"  {Colors.red('[!] Install phonenumbers: pip install phonenumbers')}"); return
     try:
         parsed = phonenumbers.parse(phone, "IN")
-        if phonenumbers.is_valid_number(parsed):
-            print(f"  {Colors.green('Valid Number:')} Yes")
-            print(f"  {Colors.green('Country:')} {phonenumbers.region_code_for_number(parsed)}")
-            print(f"  {Colors.green('Carrier (Public):')} {phonenumbers.carrier.name_for_number(parsed, 'en')}")
-            print(f"  {Colors.green('Type:')} {phonenumbers.number_type(parsed)}")
-            print(f"  {Colors.dim('Note: Owner name and address are PRIVATE and not available legally.')}")
-        else:
-            print(f"  {Colors.red('[!] Invalid phone number.')}")
-    except Exception as e:
-        print(f"  {Colors.red('[!] Error:')} {e}")
+        if not phonenumbers.is_valid_number(parsed):
+            print(f"  {Colors.red('[!] Invalid phone number.')}"); return
+        
+        print(f"\n  {Colors.magenta('--- Basic Information ---')}")
+        print(f"  {Colors.green('Valid Number:')} Yes")
+        print(f"  {Colors.green('Country Code:')} +{parsed.country_code}")
+        print(f"  {Colors.green('Country:')} {phonenumbers.region_code_for_number(parsed)}")
+        print(f"  {Colors.green('International:')} {phonenumbers.format_number(parsed, phonenumbers.PhoneNumberFormat.INTERNATIONAL)}")
+        
+        print(f"\n  {Colors.magenta('--- Telecom Provider (Public Info) ---')}")
+        carr = carrier.name_for_number(parsed, "en")
+        print(f"  {Colors.green('Operator (ISP):')} {carr if carr else 'Unknown/Portable'}")
+        
+        print(f"\n  {Colors.magenta('--- Location (Telecom Circle) ---')}")
+        region = geocoder.description_for_number(parsed, "en")
+        print(f"  {Colors.green('State/Circle:')} {region if region else 'Unknown'}")
+        
+        print(f"\n  {Colors.magenta('--- Timezone ---')}")
+        for tz in timezone.time_zones_for_number(parsed):
+            print(f"  {Colors.green('Timezone:')} {tz}")
+        
+        print(f"\n  {Colors.magenta('--- Number Type ---')}")
+        ntype = number_type(parsed)
+        type_map = {
+            PhoneNumberType.MOBILE: "Mobile", PhoneNumberType.FIXED_LINE: "Landline",
+            PhoneNumberType.FIXED_LINE_OR_MOBILE: "Fixed Line or Mobile", PhoneNumberType.VOIP: "VoIP",
+            PhoneNumberType.TOLL_FREE: "Toll Free", PhoneNumberType.PREMIUM_RATE: "Premium Rate",
+            PhoneNumberType.UNKNOWN: "Unknown"
+        }
+        print(f"  {Colors.green('Type:')} {type_map.get(ntype, 'Unknown')}")
+        
+        print(f"\n  {Colors.yellow('--- PRIVACY NOTICE ---')}")
+        print(f"  {Colors.dim('Owner Name and Address are PRIVATE data.')}")
+        print(f"  {Colors.dim('Protected under IT Act 2000 and DPDP Act.')}")
+        
+        if not os.path.exists("reports"): os.makedirs("reports")
+        report_file = f"reports/phone_osint_{parsed.national_number}.json"
+        data = {"phone": phone, "valid": True, "country": phonenumbers.region_code_for_number(parsed), "operator": carr, "region": region, "timezone": list(timezone.time_zones_for_number(parsed)), "type": type_map.get(ntype, "Unknown")}
+        with open(report_file, "w") as f: json.dump(data, f, indent=2)
+        print(f"\n  {Colors.green('[+] Report saved:')} {report_file}")
+        
+    except phonenumbers.phonenumberutil.NumberParseException as e:
+        print(f"  {Colors.red('[!] Parse Error:')} {e}")
 
-# --- MENU ---
 def run_osint():
     while True:
         print(f"\n{Colors.magenta('═' * 60)}")
@@ -107,7 +136,7 @@ def run_osint():
         print(f"  {Colors.green('1.')} Email Breach Checker (XposedOrNot)")
         print(f"  {Colors.green('2.')} Password Breach Checker (HIBP)")
         print(f"  {Colors.green('3.')} Username OSINT (WhatsMyName)")
-        print(f"  {Colors.green('4.')} Indian Phone Number OSINT (Public Info)")
+        print(f"  {Colors.green('4.')} Advanced Indian Phone OSINT")
         print(f"  {Colors.red('0.')} Back to Main Menu")
         print(f"{Colors.magenta('─' * 60)}")
         
