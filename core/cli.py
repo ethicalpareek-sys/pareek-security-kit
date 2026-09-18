@@ -28,6 +28,9 @@ def main() -> int:
         elif choice in ("1", "01"):
             from modules.information_gathering.engine import run_info_gathering
             run_info_gathering()
+        elif choice in ("2", "02"):
+            from modules.network_scanning.engine import run_network_scanning
+            run_network_scanning()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
