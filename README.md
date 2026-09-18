@@ -153,28 +153,36 @@ Made with ❤️ by Bharat Pareek
 </div>
 
 # Module Status
-01 Information Gathering 🟡 Phase 2
+01 Information Gathering 
 
-02 Network Scanning 🟡 Phase 3
+02 Network Scanning 🟡 
 
-03 Service Enumeration 🟡 Phase 4
+03 Service Enumeration 
 
-04 Web Security Testing 🟡 Phase 5
+04 Web Security Testing 
 
-05 Packet Analysis 🟡 Phase 6
-06 Network Diagnostics 🟡 Phase 6
-07 Vulnerability Assessment 🟡 Phase 7
-08 Wireless Security 🟡 Phase 8
-09 Password Auditing 🟡 Phase 9
-10 Credential Security 🟡 Phase 9
-11 Exploit Lab 🟡 Phase 10
-12 DNS Security 🟡 Phase 2
-13 SSL/TLS Analysis 🟡 Phase 5
-14 OSINT 🟡 Phase 7
-15 Cloud Security 🟡 Phase 10
-16 API Security 🟡 Phase 10
-17 File Security 🟡 Phase 10
-18 Reports 🟡 Phase 10
+05 Packet Analysis 
+
+06 Network Diagnostics
+
+07 Vulnerability Assessment
+
+08 Wireless Security 
+
+09 Password Auditing 
+
+10 Credential Security 
+
+11 Exploit Lab 
+
+12 DNS Security 
+
+13 SSL/TLS Analysis 
+14 OSINT 
+15 Cloud Security 
+16 API Security 
+17 File Security 
+18 Reports 
 19 Dependency Checker 🟢 LIVE
 
 🛠️ Tech Stack
