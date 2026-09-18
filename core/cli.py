@@ -34,6 +34,9 @@ def main() -> int:
         elif choice in ("3", "03"):
             from modules.service_enumeration.engine import run_service_enumeration
             run_service_enumeration()
+        elif choice in ("4", "04"):
+            from modules.web_security.engine import run_web_security
+            run_web_security()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
