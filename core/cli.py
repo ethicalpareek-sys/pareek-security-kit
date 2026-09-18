@@ -73,6 +73,9 @@ def main() -> int:
         elif choice in ("16",):
             from modules.api_security.engine import run_api_security
             run_api_security()
+        elif choice in ("17",):
+            from modules.file_security.engine import run_file_security
+            run_file_security()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api, dnspython, phonenumbers.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
