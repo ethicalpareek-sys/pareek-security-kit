@@ -52,9 +52,12 @@ def main() -> int:
         elif choice in ("9", "09"):
             from modules.password_auditing.engine import run_password_auditing
             run_password_auditing()
-        elif choice in ("10", "10"):
+        elif choice in ("10",):
             from modules.credential_security.engine import run_credential_security
             run_credential_security()
+        elif choice in ("11",):
+            from modules.exploit_lab.engine import run_exploit_lab
+            run_exploit_lab()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
