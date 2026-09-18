@@ -59,61 +59,6 @@
 </table>
 
 ---
-
-## 🚀 Quick Start
-
-```bash
-pkg update && pkg upgrade -y
-pkg install python git curl openssl -y
-
-git clone https://github.com/ethicalpareek-sys/pareek-security-kit.git
-cd pareek-security-kit
-
-python pareek.py --menu
-python pareek.py --doctor
-
-╔══════════════════════════════════════════════════════════════╗
-║  ██████╗  █████╗ ██████╗ ███████╗███████╗██╗  ██╗            ║
-║  ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝██║ ██╔╝            ║
-║  ██████╔╝███████║██████╔╝█████╗  █████╗  █████╔╝             ║
-║  ██╔═══╝ ██╔══██║██╔══██╗██╔══╝  ██╔══╝  ██╔═██╗             ║
-║  ██║     ██║  ██║██║  ██║███████╗███████╗██║  ██╗            ║
-║  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝            ║
-╠══════════════════════════════════════════════════════════════╣
-║  S E C U R I T Y   K I T   v 2 . 0  ·  P H O E N I X          ║
-╚══════════════════════════════════════════════════════════════╝
-
-# Module Status
-01 Information Gathering 🟡 Phase 2
-02 Network Scanning 🟡 Phase 3
-03 Service Enumeration 🟡 Phase 4
-04 Web Security Testing 🟡 Phase 5
-05 Packet Analysis 🟡 Phase 6
-06 Network Diagnostics 🟡 Phase 6
-07 Vulnerability Assessment 🟡 Phase 7
-08 Wireless Security 🟡 Phase 8
-09 Password Auditing 🟡 Phase 9
-10 Credential Security 🟡 Phase 9
-11 Exploit Lab 🟡 Phase 10
-12 DNS Security 🟡 Phase 2
-13 SSL/TLS Analysis 🟡 Phase 5
-14 OSINT 🟡 Phase 7
-15 Cloud Security 🟡 Phase 10
-16 API Security 🟡 Phase 10
-17 File Security 🟡 Phase 10
-18 Reports 🟡 Phase 10
-19 Dependency Checker 🟢 LIVE
-
-🛠️ Tech Stack
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,bash,linux,git,github,vscode,md&theme=dark&perline=7" />
-
-</div>
-
----
-
 📊 Project Stats
 
 <div align="center">
@@ -200,3 +145,62 @@ Made with ❤️ by Bharat Pareek
 🚀 Educate · Defend · Protect
 
 </div>
+
+# Module Status
+01 Information Gathering 🟡 Phase 2
+02 Network Scanning 🟡 Phase 3
+03 Service Enumeration 🟡 Phase 4
+04 Web Security Testing 🟡 Phase 5
+05 Packet Analysis 🟡 Phase 6
+06 Network Diagnostics 🟡 Phase 6
+07 Vulnerability Assessment 🟡 Phase 7
+08 Wireless Security 🟡 Phase 8
+09 Password Auditing 🟡 Phase 9
+10 Credential Security 🟡 Phase 9
+11 Exploit Lab 🟡 Phase 10
+12 DNS Security 🟡 Phase 2
+13 SSL/TLS Analysis 🟡 Phase 5
+14 OSINT 🟡 Phase 7
+15 Cloud Security 🟡 Phase 10
+16 API Security 🟡 Phase 10
+17 File Security 🟡 Phase 10
+18 Reports 🟡 Phase 10
+19 Dependency Checker 🟢 LIVE
+
+🛠️ Tech Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=python,bash,linux,git,github,vscode,md&theme=dark&perline=7" />
+
+</div>
+
+---
+
+
+## 🚀 Quick Start
+
+```bash
+pkg update && pkg upgrade -y
+pkg install python git curl openssl -y
+
+git clone https://github.com/ethicalpareek-sys/pareek-security-kit.git
+cd pareek-security-kit
+
+python pareek.py --menu
+python pareek.py --doctor
+
+╔══════════════════════════════════════════════════════════════╗
+║  ██████╗  █████╗ ██████╗ ███████╗███████╗██╗  ██╗            ║
+║  ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝██║ ██╔╝            ║
+║  ██████╔╝███████║██████╔╝█████╗  █████╗  █████╔╝             ║
+║  ██╔═══╝ ██╔══██║██╔══██╗██╔══╝  ██╔══╝  ██╔═██╗             ║
+║  ██║     ██║  ██║██║  ██║███████╗███████╗██║  ██╗            ║
+║  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝            ║
+╠══════════════════════════════════════════════════════════════╣
+║  S E C U R I T Y   K I T   v 2 . 0  ·  P H O E N I X          ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+
+
