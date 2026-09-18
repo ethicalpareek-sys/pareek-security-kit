@@ -1,0 +1,29 @@
+# ══════════════════════════════════════════════════════════
+#  PAREEK SECURITY KIT — Runtime Requirements
+# ══════════════════════════════════════════════════════════
+#
+#  Phase 1-2 uses ONLY the Python Standard Library (3.10+).
+#  No pip install needed for the base toolkit.
+#
+# ── Optional Python packages (uncomment when a phase needs them) ──
+#
+# requests>=2.32.0          # HTTP client (Phase 4: web security)
+# dnspython>=2.6.0          # Advanced DNS (Phase 2: DNS security)
+# cryptography>=43.0.0      # Deep TLS analysis (Phase 5)
+# beautifulsoup4>=4.12.0    # HTML parsing (Phase 4)
+# paramiko>=3.5.0           # SSH enumeration (Phase 4, authorized only)
+# yara-python>=4.5.0        # File rule matching (Phase 7)
+# python-whois>=0.9.0       # WHOIS lookups (Phase 2)
+# rich>=13.7.0              # Optional fancy terminal (Phase 10)
+#
+# ── External tools (install via pkg/apt, NOT pip) ──
+# nmap       → pkg install nmap
+# tcpdump    → pkg install tcpdump  (root for capture)
+# tshark     → pkg install tshark
+# openssl    → pkg install openssl-tool
+# whois      → pkg install whois
+# dig        → pkg install dnsutils
+# john       → pkg install john     (authorized audit only)
+# hashcat    → pkg install hashcat  (authorized audit only)
+#
+# ══════════════════════════════════════════════════════════

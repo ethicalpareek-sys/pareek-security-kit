@@ -1,0 +1,14 @@
+{
+  "defaults": {
+    "timeout_seconds": 5.0,
+    "threads": 50,
+    "user_agent": "PareekSecurityKit/2.0 (+authorized-testing)",
+    "rate_limit_per_second": 5.0,
+    "output_dir": "reports"
+  },
+  "safety": {
+    "require_authorization_prompt": true,
+    "allow_raw_sockets": false,
+    "allow_root_features": false
+  }
+}
