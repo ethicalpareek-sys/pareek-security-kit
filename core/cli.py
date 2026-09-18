@@ -49,6 +49,9 @@ def main() -> int:
         elif choice in ("8", "08"):
             from modules.wireless_security.engine import run_wireless_security
             run_wireless_security()
+        elif choice in ("9", "09"):
+            from modules.password_auditing.engine import run_password_auditing
+            run_password_auditing()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
