@@ -10,6 +10,7 @@ try:
 except ImportError:
     PHONE_LIB = False
 
+# --- 1. EMAIL BREACH CHECKER ---
 def check_breach_email(email: str):
     print(f"\n{Colors.cyan('[+]')} Checking Email Breaches: {Colors.bold(email)}")
     try:
@@ -28,6 +29,7 @@ def check_breach_email(email: str):
     except Exception as e:
         print(f"  {Colors.red('[!] Error:')} {e}")
 
+# --- 2. PASSWORD BREACH CHECKER (HIBP) ---
 def check_password_breach(password: str):
     print(f"\n{Colors.cyan('[+]')} Checking Password Breach (HIBP)...")
     import hashlib
@@ -45,6 +47,7 @@ def check_password_breach(password: str):
     except Exception as e:
         print(f"  {Colors.red('[!] Error:')} {e}")
 
+# --- 3. USERNAME OSINT ---
 def check_username(site_url: str, site_name: str, username: str):
     try:
         url = site_url.replace("{account}", username)
@@ -78,6 +81,7 @@ def username_osint(username: str):
     if not found:
         print(f"  {Colors.yellow('[-] Username not found on common platforms.')}")
 
+# --- 4. ADVANCED INDIAN PHONE OSINT ---
 def phone_osint(phone: str):
     print(f"\n{Colors.cyan('[+]')} Advanced Phone Number OSINT: {Colors.bold(phone)}")
     if not PHONE_LIB:
@@ -92,6 +96,7 @@ def phone_osint(phone: str):
         print(f"  {Colors.green('Country Code:')} +{parsed.country_code}")
         print(f"  {Colors.green('Country:')} {phonenumbers.region_code_for_number(parsed)}")
         print(f"  {Colors.green('International:')} {phonenumbers.format_number(parsed, phonenumbers.PhoneNumberFormat.INTERNATIONAL)}")
+        print(f"  {Colors.green('E164 Format:')} {phonenumbers.format_number(parsed, phonenumbers.PhoneNumberFormat.E164)}")
         
         print(f"\n  {Colors.magenta('--- Telecom Provider (Public Info) ---')}")
         carr = carrier.name_for_number(parsed, "en")
@@ -118,6 +123,7 @@ def phone_osint(phone: str):
         print(f"\n  {Colors.yellow('--- PRIVACY NOTICE ---')}")
         print(f"  {Colors.dim('Owner Name and Address are PRIVATE data.')}")
         print(f"  {Colors.dim('Protected under IT Act 2000 and DPDP Act.')}")
+        print(f"  {Colors.dim('Only Police/Court can access this data legally.')}")
         
         if not os.path.exists("reports"): os.makedirs("reports")
         report_file = f"reports/phone_osint_{parsed.national_number}.json"
@@ -128,6 +134,7 @@ def phone_osint(phone: str):
     except phonenumbers.phonenumberutil.NumberParseException as e:
         print(f"  {Colors.red('[!] Parse Error:')} {e}")
 
+# --- MENU ---
 def run_osint():
     while True:
         print(f"\n{Colors.magenta('═' * 60)}")
