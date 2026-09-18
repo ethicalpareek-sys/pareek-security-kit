@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
 build/
 dist/
 *.egg-info/
@@ -13,13 +12,11 @@ dist/
 .venv/
 venv/
 env/
-ENV/
 
 # IDEs
 .vscode/
 .idea/
 *.swp
-*.swo
 
 # Logs & reports
 *.log
@@ -27,11 +24,10 @@ reports/
 *.pcap
 *.cap
 
-# Local config & secrets
+# Secrets
 config/local_config.json
 .env
 .env.*
-!.env.example
 push_to_github.py
 auto_push.py
 
@@ -39,7 +35,6 @@ auto_push.py
 .pytest_cache/
 .coverage
 htmlcov/
-.tox/
 
 # OS
 .DS_Store
