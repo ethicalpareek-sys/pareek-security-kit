@@ -154,9 +154,13 @@ Made with ❤️ by Bharat Pareek
 
 # Module Status
 01 Information Gathering 🟡 Phase 2
+
 02 Network Scanning 🟡 Phase 3
+
 03 Service Enumeration 🟡 Phase 4
+
 04 Web Security Testing 🟡 Phase 5
+
 05 Packet Analysis 🟡 Phase 6
 06 Network Diagnostics 🟡 Phase 6
 07 Vulnerability Assessment 🟡 Phase 7
