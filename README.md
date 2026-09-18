@@ -1,4 +1,10 @@
 <div align="center">
+  <img src="assets/banner.svg" alt="3D Hacking Banner" width="100%"/>
+</div>
+
+<br>
+
+<div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=PAREEK%20SECURITY%20KIT&fontSize=55&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=Next-Level%20Authorized%20Testing%20Toolkit&descAlignY=55&descSize=20" width="100%"/>
 
