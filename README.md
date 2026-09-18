@@ -178,12 +178,20 @@ Made with ❤️ by Bharat Pareek
 12 DNS Security 
 
 13 SSL/TLS Analysis 
+
 14 OSINT 
-15 Cloud Security 
+
+15 Cloud Security
+
 16 API Security 
+
 17 File Security 
+
 18 Reports 
-19 Dependency Checker 🟢 LIVE
+
+19 Dependency
+
+Checker 🟢 LIVE
 
 🛠️ Tech Stack
 
