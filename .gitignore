@@ -39,11 +39,3 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
-
-# Private - source code
-pareek.py
-core/
-modules/
-tests/
-*.py
-!requirements.txt
