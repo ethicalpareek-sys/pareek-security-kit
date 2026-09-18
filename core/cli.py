@@ -25,8 +25,11 @@ def main() -> int:
         if choice in ("00", "exit", "quit", "q"):
             print(Colors.yellow("  [!] Exiting. Stay ethical!\n"))
             break
+        elif choice in ("1", "01"):
+            from modules.information_gathering.engine import run_info_gathering
+            run_info_gathering()
         elif choice == "19":
-            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests.\n"))
+            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
             print(Colors.cyan(f"\n  [*] Module {choice} selected. Under construction.\n"))
         else:
