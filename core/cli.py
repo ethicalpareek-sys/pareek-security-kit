@@ -67,6 +67,12 @@ def main() -> int:
         elif choice in ("14",):
             from modules.osint.engine import run_osint
             run_osint()
+        elif choice in ("15",):
+            from modules.cloud_security.engine import run_cloud_security
+            run_cloud_security()
+        elif choice in ("16",):
+            from modules.api_security.engine import run_api_security
+            run_api_security()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api, dnspython, phonenumbers.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
