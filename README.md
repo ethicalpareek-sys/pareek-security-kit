@@ -60,37 +60,47 @@
 - 🛠️ **Modular architecture**
 - 📜 **MIT licensed**
 
-</td>
-</tr>
-</table>
+<div align="center">
+  <img src="assets/hacker.svg" alt="Cyber Sentinel Hacker" width="100%"/>
+</div>
 
----
-📊 Project Stats
+<br>
+
+## 📊 Project Statistics
+
+<div align="center">
+  <img src="assets/stats.svg" alt="3D Stats Machine" width="100%"/>
+</div>
+
+<br>
 
 <div align="center">
 
-<a href="https://github.com/ethicalpareek-sys/pareek-security-kit">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=ethicalpareek-sys&repo=pareek-security-kit&theme=radical&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=FF006E&text_color=FFFFFF" />
-</a>
-
-
-
-
-
-<img src="https://img.shields.io/github/last-commit/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=00d9ff&labelColor=0d1117" />
-<img src="https://img.shields.io/github/repo-size/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=blueviolet&labelColor=0d1117" />
-<img src="https://img.shields.io/github/languages/count/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=green&labelColor=0d1117" />
-<img src="https://img.shields.io/github/languages/top/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=yellow&labelColor=0d1117" />
-
-
-
-
-
-<img src="https://github-profile-trophy.vercel.app/?username=ethicalpareek-sys&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15" />
+![GitHub repo size](https://img.shields.io/github/repo-size/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=ff0000)
+![GitHub stars](https://img.shields.io/github/stars/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=00ffff)
+![GitHub forks](https://img.shields.io/github/forks/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=ff00ff)
+![GitHub issues](https://img.shields.io/github/issues/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=ffaa00)
+![GitHub last commit](https://img.shields.io/github/last-commit/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=00ff88)
 
 </div>
 
----
+<br>
+
+## ⚡ Quick Start
+
+```bash
+pkg install python git -y
+git clone https://github.com/ethicalpareek-sys/pareek-security-kit.git
+cd pareek-security-kit
+pip install -r requirements.txt
+python pareek.py --menu
+
+
+
+
+
+
+
 
 📜 License
 
