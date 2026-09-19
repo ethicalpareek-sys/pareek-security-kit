@@ -43,6 +43,9 @@ def main() -> int:
         elif choice in ("6", "06"):
             from modules.network_diagnostics.engine import run_network_diagnostics
             run_network_diagnostics()
+        elif choice in ("7", "07"):
+            from modules.vulnerability_assessment.engine import run_vulnerability_assessment
+            run_vulnerability_assessment()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
