@@ -66,25 +66,10 @@
 
 <br>
 
-## 📊 Project Statistics
 
-<div align="center">
-  <img src="assets/stats.svg" alt="3D Stats Machine" width="100%"/>
-</div>
 
-<br>
 
-<div align="center">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=ff0000)
-![GitHub stars](https://img.shields.io/github/stars/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=00ffff)
-![GitHub forks](https://img.shields.io/github/forks/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=ff00ff)
-![GitHub issues](https://img.shields.io/github/issues/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=ffaa00)
-![GitHub last commit](https://img.shields.io/github/last-commit/ethicalpareek-sys/pareek-security-kit?style=for-the-badge&color=00ff88)
-
-</div>
-
-<br>
 
 ## ⚡ Quick Start
 
