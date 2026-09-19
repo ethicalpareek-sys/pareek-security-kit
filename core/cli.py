@@ -61,6 +61,9 @@ def main() -> int:
         elif choice in ("12",):
             from modules.dns_security.engine import run_dns_security
             run_dns_security()
+        elif choice in ("13",):
+            from modules.ssl_tls_analysis.engine import run_ssl_tls_analysis
+            run_ssl_tls_analysis()
         elif choice == "19":
             print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api, dnspython.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
