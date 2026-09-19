@@ -40,8 +40,11 @@ def main() -> int:
         elif choice in ("5", "05"):
             from modules.packet_analysis.engine import run_packet_analysis
             run_packet_analysis()
+        elif choice in ("6", "06"):
+            from modules.network_diagnostics.engine import run_network_diagnostics
+            run_network_diagnostics()
         elif choice == "19":
-            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy.\n"))
+            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
             print(Colors.cyan(f"\n  [*] Module {choice} selected. Under construction.\n"))
         else:
