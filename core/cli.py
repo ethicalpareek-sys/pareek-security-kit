@@ -46,8 +46,11 @@ def main() -> int:
         elif choice in ("7", "07"):
             from modules.vulnerability_assessment.engine import run_vulnerability_assessment
             run_vulnerability_assessment()
+        elif choice in ("8", "08"):
+            from modules.wireless_security.engine import run_wireless_security
+            run_wireless_security()
         elif choice == "19":
-            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute.\n"))
+            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
             print(Colors.cyan(f"\n  [*] Module {choice} selected. Under construction.\n"))
         else:
