@@ -64,8 +64,11 @@ def main() -> int:
         elif choice in ("13",):
             from modules.ssl_tls_analysis.engine import run_ssl_tls_analysis
             run_ssl_tls_analysis()
+        elif choice in ("14",):
+            from modules.osint.engine import run_osint
+            run_osint()
         elif choice == "19":
-            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api, dnspython.\n"))
+            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api, dnspython, phonenumbers.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
             print(Colors.cyan(f"\n  [*] Module {choice} selected. Under construction.\n"))
         else:
