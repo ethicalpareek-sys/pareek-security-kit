@@ -234,3 +234,11 @@ python pareek.py --doctor
 
 
 
+
+
+
+<div align="center">
+  <img src="assets/stats.svg" alt="3D Stats Machine" width="100%"/>
+</div>
+<br>
+
