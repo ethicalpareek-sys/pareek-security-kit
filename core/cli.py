@@ -31,56 +31,8 @@ def main() -> int:
         elif choice in ("2", "02"):
             from modules.network_scanning.engine import run_network_scanning
             run_network_scanning()
-        elif choice in ("3", "03"):
-            from modules.service_enumeration.engine import run_service_enumeration
-            run_service_enumeration()
-        elif choice in ("4", "04"):
-            from modules.web_security.engine import run_web_security
-            run_web_security()
-        elif choice in ("5", "05"):
-            from modules.packet_analysis.engine import run_packet_analysis
-            run_packet_analysis()
-        elif choice in ("6", "06"):
-            from modules.network_diagnostics.engine import run_network_diagnostics
-            run_network_diagnostics()
-        elif choice in ("7", "07"):
-            from modules.vulnerability_assessment.engine import run_vulnerability_assessment
-            run_vulnerability_assessment()
-        elif choice in ("8", "08"):
-            from modules.wireless_security.engine import run_wireless_security
-            run_wireless_security()
-        elif choice in ("9", "09"):
-            from modules.password_auditing.engine import run_password_auditing
-            run_password_auditing()
-        elif choice in ("10",):
-            from modules.credential_security.engine import run_credential_security
-            run_credential_security()
-        elif choice in ("11",):
-            from modules.exploit_lab.engine import run_exploit_lab
-            run_exploit_lab()
-        elif choice in ("12",):
-            from modules.dns_security.engine import run_dns_security
-            run_dns_security()
-        elif choice in ("13",):
-            from modules.ssl_tls_analysis.engine import run_ssl_tls_analysis
-            run_ssl_tls_analysis()
-        elif choice in ("14",):
-            from modules.osint.engine import run_osint
-            run_osint()
-        elif choice in ("15",):
-            from modules.cloud_security.engine import run_cloud_security
-            run_cloud_security()
-        elif choice in ("16",):
-            from modules.api_security.engine import run_api_security
-            run_api_security()
-        elif choice in ("17",):
-            from modules.file_security.engine import run_file_security
-            run_file_security()
-        elif choice in ("18",):
-            from modules.reporting.engine import run_reporting
-            run_reporting()
         elif choice == "19":
-            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils, scapy, traceroute, termux-api, dnspython, phonenumbers.\n"))
+            print(Colors.green("\n  [✓] Dependencies: Python 3, Git, curl, requests, whois, nmap, dnsutils.\n"))
         elif choice.isdigit() and 1 <= int(choice) <= 18:
             print(Colors.cyan(f"\n  [*] Module {choice} selected. Under construction.\n"))
         else:
